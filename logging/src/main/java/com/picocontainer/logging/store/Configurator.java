@@ -25,7 +25,7 @@ import com.picocontainer.logging.store.factories.PropertyLog4JLoggerStoreFactory
  * and JDK Loggers are supported. In the case of Log4J, both DOM and Property
  * configuration types are supported.
  * 
- * @author Mauro Talevi
+ * @author Mauro Talevi test 2015-7-1
  */
 public class Configurator {
     /** Constant used to define Log4J type with DOMConfigurator */
