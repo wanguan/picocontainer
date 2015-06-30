@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.picocontainer.web</groupId><artifactId>picocontainer-web</artifactId><version>3.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>picocontainer-web-core</artifactId>
+    <name>PicoContainer Web Core</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.picocontainer</groupId><artifactId>picocontainer</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>com.picocontainer</groupId><artifactId>picocontainer-gems</artifactId>
+        	<scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId><artifactId>xstream</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.picocontainer.script</groupId><artifactId>picocontainer-script-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.picocontainer.script</groupId><artifactId>picocontainer-script-testmodel</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.picocontainer.script</groupId><artifactId>picocontainer-script-groovy</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jcache</groupId><artifactId>jcache</artifactId><version>1.0-dev-2</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId><artifactId>jstl</artifactId><version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId><artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency> 
+         <dependency>
+            <groupId>javax.el</groupId><artifactId>javax.el-api</artifactId>
+            <scope>provided</scope>
+        </dependency> 
+        <dependency>
+            <groupId>org.slf4j</groupId><artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId><artifactId>slf4j-log4j12</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId><artifactId>log4j</artifactId>
+            <scope>provided</scope>
+        </dependency>  
+        <dependency>
+            <groupId>commons-logging</groupId><artifactId>commons-logging</artifactId>
+            <scope>provided</scope>
+        </dependency>             
+    </dependencies>
+</project>

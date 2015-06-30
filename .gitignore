@@ -1,0 +1,13 @@
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.idea
+.settings
+target
+/script/script-core/src/test-comp/NotStartable.class
+/script/script-core/src/test-comp/TestComp.class
+/script/script-core/src/test-comp/TestComp2.class
+/pico/container/dependency-reduced-pom.xml
+/web/web-core/profile-output.txt

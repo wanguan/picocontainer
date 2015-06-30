@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+      version="3.0"> 
+       
+	<display-name>JSF Example Webapp</display-name>
+  	<description>Demonstrates hooking JSF pages into PicoContainer web core.</description>
+	<context-param>
+	  <param-name>webapp-composer-class</param-name>
+	  <param-value>com.picocontainer.web.samples.jsf.JsfDemoComposer</param-value>
+	</context-param>	
+    <listener>
+        <listener-class>com.picocontainer.web.PicoServletContainerListener</listener-class>
+    </listener>	
+    <listener>
+    	<listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+    </listener>	
+	<!--  
+			Filter to build the request container with each request to the faces servlet.
+	 -->
+   <filter>
+        <filter-name>picoFilter</filter-name>
+        <filter-class>com.picocontainer.web.PicoServletFilter</filter-class>
+    </filter>
+
+  	<filter-mapping>
+		<filter-name>picoFilter</filter-name>
+        <url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+  
+    <!-- 
+    	JSF Installation.
+     -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+		<url-pattern>/cheese.jsf</url-pattern>
+	</servlet-mapping>	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

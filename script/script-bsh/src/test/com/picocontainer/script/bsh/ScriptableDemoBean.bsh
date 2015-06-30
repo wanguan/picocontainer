@@ -1,0 +1,3 @@
+instance = new ScriptableDemoBean();
+instance.rememberMyKey(key);
+instance.setWhatever(picoContainer.getComponent("whatever"));
